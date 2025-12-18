@@ -1,6 +1,6 @@
 # Optical Sensor Characterization: Spectral Response & Noise
 
-**Recommended GitHub repository name:** `optical-sensor-spectral-noise`
+
 
 This repository is a self-contained, article-style guide (in **English**) to measuring an image sensor’s **spectral response** and **noise** (temporal + spatial / fixed-pattern). It also includes reproducible scripts and figures so you can adapt the workflow to many CMOS/CCD-style detectors.
 
