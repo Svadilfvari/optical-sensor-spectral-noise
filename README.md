@@ -52,9 +52,11 @@ At a high level:
 
 A very simplified relation is:
 
+$$
 \[
 \text{DN} \;\propto\; G \cdot QE(\lambda) \cdot N_{\gamma}(\lambda) \; + \; \text{offset} \; + \; \text{noise}
 \]
+$$
 
 where `G` is the camera gain chain, and `Nγ` is the number of incident photons during the exposure.
 
@@ -90,7 +92,7 @@ That’s crucial when we later interpret **spatial** patterns as *sensor behavio
 ### A practical pitfall: second-order diffraction / stray light
 
 Monochromators can leak light from other diffraction orders.  
-A classic example: light at \( \lambda/2 \) (2nd order) can contaminate the measurement at \( \lambda \),
+A classic example: light at $\( \lambda/2 \)$ (2nd order) can contaminate the measurement at $\( \lambda \)$,
 especially at longer wavelengths where the source is strong and the monochromator/grating efficiency changes.
 
 ![Second-order concept](figures/remade/fig2_second_order_interference_concept.png)
@@ -105,13 +107,15 @@ In real benches, order-sorting filters and careful calibration reduce this effec
 To interpret the camera response, we want to know how much light the sphere delivers at each wavelength.
 
 A **calibrated photodiode** provides a traceable conversion from incident optical power to photocurrent via its
-**spectral responsivity** \( S(\lambda) \) (A/W):
+**spectral responsivity**  $\( S(\lambda) \) (A/W)$:
 
+$$
 \[
 I(\lambda) = S(\lambda) \cdot P(\lambda)
 \quad\Rightarrow\quad
 P(\lambda) = \frac{I(\lambda)}{S(\lambda)}
 \]
+$$
 
 In practice, the lab provides `S(λ)` (from calibration data) and we measure current `I(λ)`.
 
@@ -129,9 +133,11 @@ This repo includes an *example* power-vs-wavelength curve:
 
 A common approach is to compute a **relative spectral response**:
 
+$$
 \[
 R_{\text{cam}}(\lambda) \;\propto\; \frac{\text{DN}(\lambda) - \text{DN}_{\text{dark}}}{P(\lambda)}
 \]
+$$
 
 - `DN(λ)` is the mean pixel value measured under monochromatic illumination.
 - `DN_dark` is the mean value with the light blocked (offset + dark signal).
@@ -177,15 +183,19 @@ If we record many frames under constant illumination and track one pixel, we obs
 
 A standard estimate for temporal noise for one pixel is the standard deviation over time:
 
+$$
 \[
 \sigma_t = \mathrm{std}(x_1, x_2, \ldots, x_N)
 \]
+$$
 
 A very robust trick (when illumination might drift slowly) is to use the difference of consecutive frames:
 
+$$
 \[
 \sigma_t \approx \frac{\mathrm{std}(I_1 - I_2)}{\sqrt{2}}
 \]
+$$
 
 because subtracting cancels constant offsets and halves shared low-frequency trends.
 
@@ -198,7 +208,7 @@ because subtracting cancels constant offsets and halves shared low-frequency tre
 
 ### Spatial noise / fixed-pattern noise (pixel-to-pixel)
 
-If we average many frames, temporal noise reduces roughly as \(1/\sqrt{N}\), but **fixed-pattern** components remain.
+If we average many frames, temporal noise reduces roughly as $\(1/\sqrt{N}\)$, but **fixed-pattern** components remain.
 
 The average image can show illumination structure (from the sphere / optics), and the residual after subtracting a smooth
 average can reveal fixed-pattern texture:
