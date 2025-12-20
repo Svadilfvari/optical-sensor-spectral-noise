@@ -3,7 +3,7 @@
 
 **Course / Track:** Bio-Inspired Vision — Sorbonne Université (Master *Sciences de l’Ingénieur*, ISI)  
 **Academic year:** 2024–2025  
-**Students (Group A+B):** Edouard Aboudaoud, Massin Assoul, Jessy Azizi, Haitem Bensalah, Amir Wail Bouhedja, Tony Cao, Benjamin Dukatar, Mohamed Mammeri
+**Students (Group A+B):** Edouard David, Massin Assoul, Jessy Azizi, Haitem Bensalah, Amir Wail Bouhedja, Tony Cao, Benjamin Dukatar, Mohamed Mammeri
 
 ---
 
